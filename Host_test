@@ -1,0 +1,10 @@
+SELECT
+    hu.name AS host_name,
+    COUNT(DISTINCT b.booking_id) AS total_bookings,
+    AVG(r.rating) AS average_rating
+FROM hosts h
+JOIN users hu ON h.user_id = hu.user_id
+LEFT JOIN listings l ON h.host_id = l.host_id
+LEFT JOIN bookings b ON l.listing_id = b.listing_id
+LEFT JOIN reviews r ON l.listing_id = r.listing_id
+GROUP BY hu.name;
