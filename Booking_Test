@@ -1,0 +1,13 @@
+SELECT 
+    b.booking_id,
+    u.name AS guest_name,
+    l.title AS listing_name,
+    hu.name AS host_name,
+    b.check_in_date,
+    b.check_out_date
+FROM bookings b
+JOIN guests g ON b.guest_id = g.guest_id
+JOIN users u ON g.user_id = u.user_id
+JOIN listings l ON b.listing_id = l.listing_id
+JOIN hosts h ON l.host_id = h.host_id
+JOIN users hu ON h.user_id = hu.user_id;
