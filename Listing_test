@@ -1,0 +1,10 @@
+SELECT 
+    l.listing_id,
+    l.title,
+    GROUP_CONCAT(DISTINCT a.name SEPARATOR ', ') AS amenities,
+    COUNT(i.image_id) AS total_images
+FROM listings l
+LEFT JOIN listing_amenities la ON l.listing_id = la.listing_id
+LEFT JOIN amenities a ON la.amenity_id = a.amenity_id
+LEFT JOIN images i ON l.listing_id = i.listing_id
+GROUP BY l.listing_id, l.title;
