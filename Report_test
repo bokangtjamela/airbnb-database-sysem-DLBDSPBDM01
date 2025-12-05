@@ -1,0 +1,9 @@
+SELECT 
+    r.report_id,
+    u.name AS reporter_name,
+    l.title AS listing_name,
+    r.report_reason,
+    r.report_status
+FROM reports r
+JOIN users u ON r.reporter_id = u.user_id
+LEFT JOIN listings l ON r.listing_id = l.listing_id;
