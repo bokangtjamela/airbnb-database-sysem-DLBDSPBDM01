@@ -64,7 +64,8 @@ FROM User
 JOIN Host ON User.UserID = Host.UserID;
 
 # ERD Diagram
-![ERM_2](https://github.com/user-attachments/assets/3a74c6f6-e563-41b0-8836-82595047bc7b)
+![ERD_Diagram](https://github.com/user-attachments/assets/ee040f96-d959-4217-9971-fbf37c33e1c1)
+
 
 # Contributing
 - Contributions are welcome!
