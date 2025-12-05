@@ -31,23 +31,22 @@ This project implements a full database solution for a short-term rental platfor
 # Repository Structure
 airbnb-database-system/
 │
-├── /erd/
-│   ├── conceptual_erd.png
-│   ├── full_logical_erd_coloured.png
-│   └── erd.pdf
+ /erd/
+│  conceptual_erd.png
+│  full_logical_erd_coloured.png
+│  erd.pdf
 │
-├── /sql/
-│   ├── create_tables.sql
-│   ├── insert_test_data.sql
-│   ├── full_database_export.sql
+/sql/
+│  create_tables.sql
+│  insert_test_data.sql
+│  full_database_export.sql
 │
-├── /docs/
-│   ├── table_descriptions.pdf
-│   ├── implementation_summary.pdf
-│   └── project_report.md
-│
-├── README.md
-└── LICENSE (optional)
+ /docs/
+│  table_descriptions.pdf
+│  implementation_summary.pdf
+│  project_report.md
+│README.md
+LICENSE (optional)
 
 # How to Use This Project
 * Clone the repository
