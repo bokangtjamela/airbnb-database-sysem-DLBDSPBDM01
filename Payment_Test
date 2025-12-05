@@ -1,0 +1,12 @@
+SELECT 
+    p.payment_id,
+    b.booking_id,
+    u.name AS guest_name,
+    p.amount,
+    pm.method_name,
+    p.transaction_reference
+FROM payments p
+JOIN bookings b ON p.booking_id = b.booking_id
+JOIN guests g ON b.guest_id = g.guest_id
+JOIN users u ON g.user_id = u.user_id
+JOIN payment_methods pm ON p.payment_method_id = pm.payment_method_id;
