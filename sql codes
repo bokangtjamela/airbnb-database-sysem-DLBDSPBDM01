@@ -1,1 +1,6 @@
 # Testing
+SELECT u.user_id, u.name, u.email, h.host_id, g.guest_id, sa.platform_id
+FROM users u
+LEFT JOIN hosts h ON u.user_id = h.user_id
+LEFT JOIN guests g ON u.user_id = g.user_id
+LEFT JOIN user_social_accounts sa ON u.user_id = sa.user_id;
